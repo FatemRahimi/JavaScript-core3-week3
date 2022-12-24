@@ -70,3 +70,18 @@ let hogwarts = [
     occupation: "Teacher",
   },
 ];
+
+function printGryffindor(array) {
+  array.filter(({ house }) => house === 'Gryffindor').forEach(({ firstName, lastName}) => {
+    console.log(`${firstName} ${lastName}`)
+  })
+}
+
+function printTeachersWithPets(array) {
+  array.filter(({ pet }) => pet).forEach(({ firstName, lastName}) => {
+    console.log(`${firstName} ${lastName}`)
+  })
+}
+
+printGryffindor(hogwarts)
+printTeachersWithPets(hogwarts)
